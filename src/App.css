@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../src/img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.boardG {
+  width: 700px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+  color: #fff;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+.ins {
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  line-height: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 800px;
+  color: #fff;
+}
+.back-link {
+  color: #fff;
+}
+.light-ins {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.btn-start {
+  background: none;
+  color: #fff;
+  font-size: 22px;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.light-ins .ins-link {
+  color: #fff;
+}
+form {
+  width: 100%;
+  text-align: center;
+}
+input[type="number"] {
+  width: 80%;
+  height: auto;
+  padding: 5px 10px;
+  text-align: center;
+  border: 2px solid #34495e;
+  font-size: 35px;
+  color: #34495e;
+  border-radius: 12px;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+}
+.att-guess {
+  width: 295px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+.winner {
+  color: #ffffff;
+  font-size: 35px;
+  text-align: center;
+}
+.quit-g {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: #34495e;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 817px) {
+  .ins {
+    min-width: 320px;
+    width: unset;
+    font-size: 18px;
+  }
+  .boardG {
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 710px) {
+  h1 {
+    font-size: 85px;
+  }
+  .boardG {
+    width: 485px;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .ins {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 489px) {
+  h1 {
+    font-size: 65px;
+  }
+  .boardG {
+    width: 319px;
+  }
+  .light-ins,
+  .btn-start {
+    font-size: 20px;
+  }
+}
