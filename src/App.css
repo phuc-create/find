@@ -17,8 +17,11 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
-.boardG {
+.boardG,
+.winner {
+  margin: 0 auto;
   width: 700px;
   height: auto;
   background: rgba(0, 0, 0, 0.5);
@@ -28,6 +31,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20vh;
+}
+.attemp-show {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
 }
 h1 {
   width: 100%;
@@ -37,6 +50,7 @@ h1 {
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 }
 .ins {
+  text-align: left;
   background: rgba(0, 0, 0, 0.5);
   font-size: 20px;
   line-height: 40px;
@@ -71,7 +85,8 @@ form {
   width: 100%;
   text-align: center;
 }
-input[type="number"] {
+input[type="number"],
+input[type="text"] {
   width: 80%;
   height: auto;
   padding: 5px 10px;
@@ -96,9 +111,17 @@ input[type="number"] {
   color: #fff;
 }
 .winner {
+  position: relative;
   color: #ffffff;
   font-size: 35px;
   text-align: center;
+}
+.winner .result-g {
+  width: 100%;
+  word-break: break-word;
+}
+.nomr {
+  margin-top: 0;
 }
 .quit-g {
   position: absolute;
@@ -113,6 +136,8 @@ input[type="number"] {
   color: #fff;
   font-size: 17px;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 @media only screen and (max-width: 817px) {
   .ins {
@@ -120,7 +145,8 @@ input[type="number"] {
     width: unset;
     font-size: 18px;
   }
-  .boardG {
+  .boardG,
+  .winner {
     margin-top: 50px;
   }
 }
@@ -128,8 +154,19 @@ input[type="number"] {
   h1 {
     font-size: 85px;
   }
-  .boardG {
+  .boardG,
+  .winner {
     width: 485px;
+    padding: 5px;
+  }
+  .winner {
+    font-size: 30px;
+  }
+  input[type="number"],
+  input[type="text"],
+  .user-submit-setting {
+    font-size: 20px !important;
+    border-radius: 9px !important;
   }
 }
 @media only screen and (max-width: 510px) {
@@ -141,11 +178,90 @@ input[type="number"] {
   h1 {
     font-size: 65px;
   }
-  .boardG {
+  .boardG,
+  .winner {
     width: 319px;
   }
   .light-ins,
   .btn-start {
     font-size: 20px;
   }
+  .r-s .r-s-w span:nth-child(1),
+  .r-s .r-s-w span:nth-child(3) {
+    width: 30% !important;
+  }
+}
+.start-g {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+.input-fill {
+  font-size: 20px;
+  color: #ffffff;
+}
+.user-submit-setting {
+  width: 80%;
+  height: auto;
+  padding: 5px;
+  text-align: center;
+  border: 2px solid #34495e;
+  font-size: 20px;
+  color: #34495e;
+  border-radius: 12px;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.r-head {
+  display: flex;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+  background: #ffffff;
+  border-radius: 7px;
+  font-size: auto;
+}
+.r-s {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.r-s .r-s-w {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: initial;
+  color: #ffffff;
+  padding: 4px;
+  word-break: break-word;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.r-s .r-s-w span:nth-child(1),
+.r-s .r-s-w span:nth-child(3) {
+  width: 9%;
+}
+.r-s .r-s-w span:nth-child(2) {
+  padding: 0px 3px;
+}
+.find-by-rank {
+  width: 100%;
+  position: relative;
+  color: #ffffff;
+}
+.find-by-rank input[type="number"] {
+  width: 100%;
+  margin-bottom: 30px;
 }

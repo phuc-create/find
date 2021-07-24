@@ -1,9 +1,8 @@
 import React from "react";
-
 const ShowAttempt = ({ attemp }) => {
   const sort = attemp.sort((a, b) => b.id - a.id);
   return (
-    <div>
+    <div className="attemp-show">
       {sort.length > 0 &&
         sort.map((att) => {
           return (
